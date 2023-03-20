@@ -11,25 +11,25 @@
 
 # 1st way with count
 
-import time
-
-list = []
-n = int(input("Enter the number of elements in the array N:  "))
-for i in range(n):
-    list.append(int(input(f"Enter {i + 1} number: ")))
-x = int(input("Enter number Х: "))
-count = 0
-print(n)
-print(list)
-print(x)
-start = time.perf_counter()
-for i in range(n):
-    if list[i] == x:
-        count += 1
-print(f"-> {count}")
-end = time.perf_counter()
-time = end - start
-print(f"Script execution time: {time}")
+# import time
+#
+# list = []
+# n = int(input("Enter the number of elements in the array N:  "))
+# for i in range(n):
+#     list.append(int(input(f"Enter {i + 1} number: ")))
+# x = int(input("Enter number Х: "))
+# count = 0
+# print(n)
+# print(list)
+# print(x)
+# start = time.perf_counter()
+# for i in range(n):
+#     if list[i] == x:
+#         count += 1
+# print(f"-> {count}")
+# end = time.perf_counter()
+# time = end - start
+# print(f"Script execution time: {time}")
 
 # 2nd way without count
 
@@ -48,3 +48,32 @@ print(f"Script execution time: {time}")
 # end = time.perf_counter()
 # time = end - start
 # print(f"Script execution time: {time}")
+
+
+
+# Задача 18: Требуется найти в массиве A[1 N] самый близкий по
+# величине элемент к заданному числу X. Пользователь в первой строке
+# вводит натуральное число N – количество элементов в массиве. В
+# последующих строках записаны N целых чисел Ai.
+# Последняя строка содержит число X
+# 5
+# 1 2 3 4 5
+# 6
+# -> 5
+
+
+import time
+num = int(input('Кол. чисел:'))
+a = []
+for i in range(num):
+    a.append(int(input(f"Enter {i + 1} number: ")))
+x = int(input('Заданное число:'))
+start = time.perf_counter()
+b = [abs(a[i]-x) for i in range(len(a))]
+print(num)
+print(a)
+print(x)
+print(f"-> {a[b.index(min(b))]}")
+end = time.perf_counter()
+time = end - start
+print(f"Script execution time: {time}")
