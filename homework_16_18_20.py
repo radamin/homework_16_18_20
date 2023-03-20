@@ -104,48 +104,48 @@
 # 12
 
 
-import time
-
-word = input(f"Enter a word: ")
-n = None
-
-start = time.perf_counter()
-
-
-def letter_cost(ch):
-    global n
-    ch = ch.upper()
-    if ch in " ":
-        n = 0
-    elif ch in "A E I O U L N S T R А В Е И Н О Р С Т":
-        n = 1
-    elif ch in "D G Д К Л М П У":
-        n = 2
-    elif ch in "B C M P Б Г Ё Ь Я":
-        n = 3
-    elif ch in "F H V W Y Й Ы":
-        n = 4
-    elif ch in "K Ж З Х Ц Ч":
-        n = 5
-    elif ch in "J X Ш Э Ю":
-        n = 8
-    elif ch in "Q Z Ф Щ Ъ":
-        n = 10
-    return n
-
-
-def word_counter():
-    word_count = 0
-    w_c = word.upper()
-    for i in w_c:
-        l_c = letter_cost(i)
-        word_count += l_c
-        print(f"{i} = {l_c}")
-    return word_count
-
-
-print(f"Output: {word_counter()}")
-print()
-end = time.perf_counter()
-time = end - start
-print(f"Script execution time: {time}")
+# import time
+#
+# word = input(f"Enter a word: ")
+# n = None
+#
+# start = time.perf_counter()
+#
+#
+# def letter_cost(ch):
+#     global n
+#     ch = ch.upper()
+#     if ch in " ":
+#         n = 0
+#     elif ch in "A E I O U L N S T R А В Е И Н О Р С Т":
+#         n = 1
+#     elif ch in "D G Д К Л М П У":
+#         n = 2
+#     elif ch in "B C M P Б Г Ё Ь Я":
+#         n = 3
+#     elif ch in "F H V W Y Й Ы":
+#         n = 4
+#     elif ch in "K Ж З Х Ц Ч":
+#         n = 5
+#     elif ch in "J X Ш Э Ю":
+#         n = 8
+#     elif ch in "Q Z Ф Щ Ъ":
+#         n = 10
+#     return n
+#
+#
+# def word_counter():
+#     word_count = 0
+#     w_c = word.upper()
+#     for i in w_c:
+#         l_c = letter_cost(i)
+#         word_count += l_c
+#         print(f"{i} = {l_c}")
+#     return word_count
+#
+#
+# print(f"Output: {word_counter()}")
+# print()
+# end = time.perf_counter()
+# time = end - start
+# print(f"Script execution time: {time}")
