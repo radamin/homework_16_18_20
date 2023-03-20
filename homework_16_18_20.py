@@ -21,7 +21,7 @@
 # count = 0
 # print(n)
 # print(list)
-# print(x)
+# print(x
 # start = time.perf_counter()
 # for i in range(n):
 #     if list[i] == x:
@@ -30,6 +30,7 @@
 # end = time.perf_counter()
 # time = end - start
 # print(f"Script execution time: {time}")
+
 
 # 2nd way without count
 
@@ -41,13 +42,15 @@
 #
 # start = time.perf_counter()
 # num_list = [random.randint(1, 10) for _ in range(len_list)]
+# end = time.perf_counter()
+# time = end - start
 # print(len_list)
 # print(num_list)
 # print(x_num)
 # print(f'-> {num_list.count(x_num)}')
-# end = time.perf_counter()
-# time = end - start
 # print(f"Script execution time: {time}")
+
+
 
 
 # Задача 18: Требуется найти в массиве A[1 N] самый близкий по
